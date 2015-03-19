@@ -31,3 +31,6 @@ npm-debug.log
 
 #.remotesync
 .remote-sync.json
+
+#enviroment script file
+setenv.sh
