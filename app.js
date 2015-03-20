@@ -30,6 +30,10 @@ function app(db){
 		var file = path.join(__dirname, 'public/front-end/index.html');
 		res.sendFile(file);
 	});
+
+  //Levantamos la ruta del api
+  var apiRoute = require('./routes/api_v1');
+  app.use("/api", apiRoute);
   // catch 404 and forward to error handler
   app.use(function(req, res, next) {
     var err = new Error('Not Found');
@@ -60,6 +64,7 @@ function app(db){
       error: {}
     });
   });
+
   return app;
 }
 
