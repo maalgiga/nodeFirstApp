@@ -32,7 +32,7 @@ function app(db){
 	});
 
   //Levantamos la ruta del api
-  var apiRoute = require('./routes/api_v1');
+  var apiRoute = require('./routes/api_v1')(db);
   app.use("/api", apiRoute);
   // catch 404 and forward to error handler
   app.use(function(req, res, next) {
