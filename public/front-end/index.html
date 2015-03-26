@@ -4,7 +4,22 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title></title>
-    <link rel="stylesheet" href="vendor/jqm/c/jquery.mobile.min.css"/>
+    <link rel="stylesheet" href="vendor/jqm/c/t/uchmnt.min.css"/>
+    <link rel="stylesheet" href="vendor/jqm/c/t/jquery.mobile.icons.min.css"/>
+    <link rel="stylesheet" href="vendor/jqm/c/jquery.mobile.structure-1.4.5.min.css"/>
+    <style>
+       [data-field]{
+         font-size:0.8em;
+         font-weight:bolder;
+         padding:0.5em 0.25em;
+       }
+       label{
+         font-weight:bolder !important;
+       }
+       .negative{
+         background-color:#db0f0f !important;
+       }
+    </style>
     <script src="vendor/jqm/j/jquery.min.js" ></script>
     <script src="vendor/jqm/j/jquery.mobile.min.js" ></script>
   </head>
@@ -23,6 +38,69 @@
         </div>
       </div>
 
+      <div data-role="page" id="pag2">
+        <div data-role="header" data-position="fixed"
+            data-add-back-btn="true" data-back-btn-text="Atrás"
+          >
+          <h1>Reporte</h1>
+        </div>
+        <div role="main" class="ui-content">
+          <div id="detalleAula">
+            <div class="ui-field-contain">
+              <label for="NombreCurso">Curso</label>
+              <div id="NombreCurso" data-field="NombreCurso"></div>
+            </div>
+            <div class="ui-field-contain ui-grid-b">
+              <div class="ui-block-a">
+                <label for="Edificio">Edificio</label>
+                <div id="Edificio" data-field="Edificio" ></div>
+              </div>
+              <div class="ui-block-b">
+                <label for="Aula">Aula</label>
+                <div id="Aula" data-field="Aula"></div>
+              </div>
+              <div class="ui-block-c">
+                <label for="Seccion">Sección</label>
+                <div id="Seccion" data-field="Seccion"></div>
+              </div>
+            </div>
+            <div class="ui-field-contain ui-grid-a">
+              <div class="ui-block-a ui-grid-b">
+                <div class="ui-block-a" data-field="Lns" id="Lns">
+                  Lns
+                </div>
+                <div class="ui-block-b" data-field="Mrt" id="Mrt">
+                  Mrt
+                </div>
+                <div class="ui-block-c" data-field="Mrc" id="Mrc">
+                  Mrc
+                </div>
+              </div>
+              <div class="ui-block-b ui-grid-b">
+                <div class="ui-block-a" data-field="Jvs" id="Jvs">
+                  Jvs
+                </div>
+                <div class="ui-block-b" data-field="Vrn" id="Vrn">
+                  Vrn
+                </div>
+                <div class="ui-block-c" data-field="Sbd" id="Sbd">
+                  Sbd
+                </div>
+              </div>
+            </div>
+            <div class="ui-field-contain">
+              <label for="NombreDocente">Docente</label>
+              <div id="NombreDocente" data-field="NombreDocente"></div>
+            </div>
+            <div class="ui-field-contain">
+              <input type="button" value="Reportar" id="btnReportar" class="negative"/>
+            </div>
+          </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+
+        </div>
+      </div>
       <script src="front-end/app_front.js"></script>
   </body>
 </html>
