@@ -1,0 +1,22 @@
+[{
+  "user":"admin",
+  "pin":1234,
+  "userName":"Administrador",
+  "tocken":"",
+  "expires":"123456789"
+  },
+  {
+    "user":"user1",
+    "pin":1029,
+    "userName":"Usuario 1",
+    "tocken":"",
+    "expires":"123456789"
+    },
+  {
+    "user":"user2",
+    "pin":1380,
+    "userName":"Usuario 2",
+    "tocken":"",
+    "expires":"123456789"
+  }
+]

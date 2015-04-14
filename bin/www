@@ -6,8 +6,10 @@
 
 var mongoClient = require("mongodb").MongoClient;
 var mongoUrl = "mongodb://localhost:27017/uchMonitor";
-
-mongoClient.connect(mongoUrl, function(err, db){
+var options = {
+  "server":{"poolSize":10}
+};
+mongoClient.connect(mongoUrl, options ,function(err, db){
 
   if(err){
     onError(err);

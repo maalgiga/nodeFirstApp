@@ -14,16 +14,27 @@
          padding:0.5em 0.25em;
        }
        label{
+         font-size:0.8em;
          font-weight:bolder !important;
        }
        .negative{
-         background-color:#db0f0f !important;
+         background-color:#b73a05 !important;
+         color:white !important;
        }
     </style>
     <script src="vendor/jqm/j/jquery.min.js" ></script>
     <script src="vendor/jqm/j/jquery.mobile.min.js" ></script>
   </head>
   <body>
+      <div data-role="page" id="init">
+
+        <div role="main" class="ui-content">
+          <h1 style="text-align:center;">Sistema de Supervisión UNICAH</h1>
+          <a id="btnlogin" class="ui-input-btn ui-btn ui-corner-all" href="#login">Iniciar</a>
+        </div>
+
+      </div>
+
       <div data-role="page" id="pag1">
         <div data-role="header" data-position="fixed">
           <h1>Supervisión</h1>
@@ -39,9 +50,7 @@
       </div>
 
       <div data-role="page" id="pag2">
-        <div data-role="header" data-position="fixed"
-            data-add-back-btn="true" data-back-btn-text="Atrás"
-          >
+        <div data-role="header" data-position="fixed">
           <h1>Reporte</h1>
         </div>
         <div role="main" class="ui-content">
@@ -92,15 +101,45 @@
               <label for="NombreDocente">Docente</label>
               <div id="NombreDocente" data-field="NombreDocente"></div>
             </div>
-            <div class="ui-field-contain">
-              <input type="button" value="Reportar" id="btnReportar" class="negative"/>
+            <div class="ui-field-contain ui-grid-a">
+              <div class="ui-block-a">
+                <input type="button" value="Reportar" id="btnReportar" class="negative"/>
+              </div>
+              <div class="ui-block-b">
+                <a href="#pag1" class="ui-input-btn ui-btn ui-corner-all">Regresar</a>
+              </div>
             </div>
+            <ul id="lstReporte" data-inset="true">
+
+            </ul>
           </div>
+
         </div>
         <div data-role="footer" data-position="fixed">
 
         </div>
       </div>
+
+      <div data-role="page" id="login">
+
+        <div role="main" class="ui-content">
+          <h1>Login Page</h1>
+          <div class="ui-field-contain">
+            <label for="UserName">Usuario</label>
+            <input type="text" id="UserName" name="UserName" placeholder="Usuario"/>
+          </div>
+          <div class="ui-field-contain">
+            <label for="pinnumber">PIN</label>
+            <input type="text" id="pinnumber" name="pinnumber" placeholder="Código PIN"/>
+          </div>
+          <div class="ui-field-contain">
+            <input type="button" id="btnlogon" name="btnlogon" value="Ingresar"/>
+          </div>
+        </div>
+      </div>
+
+
+
       <script src="front-end/app_front.js"></script>
   </body>
 </html>
